@@ -1,5 +1,5 @@
 import streamlit as st
-requirement.txt
+requirements.txt
 import numpy as np
 import matplotlib.pyplot as plt
 
