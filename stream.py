@@ -46,11 +46,6 @@ retention_rate = st.sidebar.number_input("Retention Rate", value=0.8)
 days = st.sidebar.slider("Number of Days", 2, 10, 4)
 
 st.sidebar.subheader("Retention Boost (Scenario 2)")
-initial_dau = st.sidebar.number_input("Initial DAU", value=100)
-initial_new_users = st.sidebar.number_input("Initial New Users", value=50)
-growth_rate = st.sidebar.number_input("Growth Rate", value=1.2)
-retention_rate = st.sidebar.number_input("Retention Rate", value=0.8)
-days = st.sidebar.slider("Number of Days", 2, 10, 4)
 retention_boost_day = st.sidebar.number_input("Boost Day", value=2)
 boost_amount = st.sidebar.number_input("Boost Amount", value=0.1)
 
