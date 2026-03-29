@@ -46,11 +46,7 @@ retention_rate = st.sidebar.number_input("Retention Rate", value=0.8)
 days = st.sidebar.slider("Number of Days", 2, 10, 4)
 
 st.sidebar.subheader("Retention Boost (Scenario 2)")
-initial_dau = st.sidebar.number_input("Initial DAU", value=100)
-initial_new_users = st.sidebar.number_input("Initial New Users", value=50)
-growth_rate = st.sidebar.number_input("Growth Rate", value=1.2)
-retention_rate = st.sidebar.number_input("Retention Rate", value=0.8)
-days = st.sidebar.slider("Number of Days", 2, 10, 4)
+
 retention_boost_day = st.sidebar.number_input("Boost Day", value=2)
 boost_amount = st.sidebar.number_input("Boost Amount", value=0.1)
 
@@ -96,6 +92,8 @@ if st.button("Run Simulation"):
     ax.plot(days_list, dropouts1, label='Dropouts (Scenario 1)', marker='^')
 
     ax.plot(days_list, dau2, label='DAU (Scenario 2)', linestyle='--', marker='o')
+    ax.plot(days_list, new_users1, label='New Users (Scenario 1)', marker='s')
+    ax.plot(days_list, dropouts1, label='Dropouts (Scenario 1)', marker='^')
 
     ax.set_title("Fitness App User Growth")
     ax.set_xlabel("Day")
